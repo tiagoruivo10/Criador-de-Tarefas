@@ -9,6 +9,7 @@ import {
   ListItem,
   Check,
   Trash,
+  InputWrapper,
 } from "./styles";
 
 function App() {
@@ -58,12 +59,14 @@ function App() {
       <h1>Lista de tarefas</h1>
 
       <ToDoList>
-        <Input
-          onChange={inputMudou}
-          value={inputTask}
-          placeholder="O que tenho para fazer"
-        />
-        <Button onClick={cliqueiNoBotao}> Adicionar </Button>
+        <InputWrapper>
+          <Input
+            onChange={inputMudou}
+            value={inputTask}
+            placeholder="O que tenho para fazer"
+          />
+          <Button onClick={cliqueiNoBotao}> Adicionar </Button>
+        </InputWrapper>
 
         <ul>
           {list.length > 0 ? (
